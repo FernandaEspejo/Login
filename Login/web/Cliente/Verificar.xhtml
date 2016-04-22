@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Verificar
+        </title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+ 
+      
+          <h:body>
+              
+        <div id="wrapper">
+            <div class="container">
+                <div class="row">
+                     <div class="col-lg-12">
+             <nav>
+    <div class="nav-wrapper">
+         
+       <img src="../img/valley.png" width="75" height="75" alt="sena"/>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+        <li><a href="index.xhtml">Salir</a></li>
+        
+        
+      </ul>
+    </div>
+                 
+  </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+      
+           
+            </div>
+            
+            <div class="row">
+                
+                
+                <div class="modal-content">
+                    <center><h4>
+           Verificacion De Envios
+                        </h4></center>
+       <div class="row">
+           <h:form class="col s12">
+               
+               
+                 <table>
+        <thead>
+          <tr>
+              <th data-field="id">Tipo De Envio</th>
+              <th data-field="name">fecha De Envio</th>
+              <th data-field="name">Descripcion Del Paquete</th>
+               <th data-field="name">Ciudad Origen</th>
+                <th data-field="name">Ciudad Destino</th>
+              <th data-field="price">Via</th>
+              <th data-field="name">Comentarios</th>
+               
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Electrodomestico</td>
+            <td>02/03/2016</td>
+            <td>Frajil</td>
+            <td>Bogota</td>
+            <td>Medellin</td>
+            <td>Terrestre</td>
+            <td>En Ruta</td>
+            
+          </tr>
+          <tr>
+            <td>Papeleria</td>
+            <td>02/03/2016</td>
+            <td>Frajil</td>
+            <td>Bogota</td>
+            <td>Medellin</td>
+            <td>Aerea</td>
+            <td>En Bodega</td>
+
+          </tr>
+          <tr>
+            <td>Granos</td>
+            <td>02/03/2016</td>
+            <td>Garbanzo</td>
+            <td>Bogota</td>
+            <td>Medellin</td>
+            <td>Terrestre</td>
+            <td>LLego A Su Destino</td>
+          </tr>
+        </tbody>
+      </table>
+               
+               
+               
+           </h:form>
+     
+        <a href="Mis_Envios.xhtml" class="waves-effect waves-light btn #ff6e40 deep-orange accent-2" >Atras</a>
+    </div>
+              
+                
+                
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+        </div>     
+        
+   
+       
+       
+        
+       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.js" type="text/javascript"></script>
+        <script src="../js/materialize.min.js" type="text/javascript"></script>
+        <script>
+             $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+        </script>
+        <script>
+            $(document).ready(function() {
+    $('select').material_select();
+  });
+        </script>
+       
+        
+    </h:body>
+    
+</html>

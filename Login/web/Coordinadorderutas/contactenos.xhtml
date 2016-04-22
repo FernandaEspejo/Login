@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     </h:head>
+    <h:body>
+        
+           
+              <div class="nav-wrapper">
+   <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Valley Cargo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+          <li><h:link outcome="vehiculos" value="Vehiculos"/></li> 
+          <li><h:link outcome="pedidos" value="Pedidos"/></li> 
+          <li><h:link outcome="conductores" value="Conductores"/></li> 
+          <li><h:link outcome="misdatos" value="Misdatos"/></li> 
+          <li><h:link outcome="contactenos" value="Contactenos"/></li>
+          
+       </ul> 
+    </div>
+  </nav>
+                   
+             <div class="container">
+           
+                 <c:if test="#{usuariocontrolador.estados==1}">
+                     <a class="btn" onclick="Materialize.toast('mensaje enviado espere pronto respuesta', 4000)">Toast!</a>
+                 </c:if>
+                 <c:if test="#{usuariocontrolador.estados==2}">
+                     <a class="btn" onclick="Materialize.toast('error intente mas tarde', 4000)">Toast!</a>
+                 </c:if>
+        
+            
+                <br/>
+                    <h1><center><h:outputText value="Contactenos"/></center></h1>
+                <br/>
+                <h:form class="col s12">
+      <div class="row">
+          <div class="input-field col s6">
+          <i class="material-icons prefix">person_pin</i>
+          <input id="icon_prefix" type="text" value="#{usuariocontrolador.fcnombre}" class="validate"/>
+          <label for="icon_chat_bubble_outline">Nombre</label>
+        </div>
+       <div class="input-field col s6">
+          <i class="material-icons prefix">sort_by_alpha</i>
+          <input id="icon_prefix" type="text" value="#{usuariocontrolador.fcmensaje}" class="validate"/>
+          <label for="icon_prefix">Mensaje</label>
+        </div>
+       
+         
+           <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" value="#{usuariocontrolador.fctelefono}" class="validate"/>
+          <label for="icon_telephone">Telefono</label>
+        </div>
+          <div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <input id="icon_prefix" type="text" value="#{usuariocontrolador.fccorreo}" class="validate"/>
+          <label for="icon_prefix">Correo</label>
+        </div>
+          <h:commandButton class="waves-effect waves-light btn-large" action="#{usuariocontrolador.enviarmensajecontacto()}" value="enviar"/>
+            <li><center> <a  class="waves-effect waves-light btn-large" style="bottom-align-content: 20px; left:20px">Enviar</a>
+          <a class="waves-effect waves-light btn-large" style="bottom-align-content: 20px; left:20px">Cancelar</a></center></li>
+
+ </div>
+   </h:form>
+          </div>     
+        </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.js" type="text/javascript"></script>
+        <script src="../js/materialize.min.js" type="text/javascript"></script>
+        <script>
+  // Materialize.toast(message, displayLength, className, completeCallback);
+  Materialize.toast('mensaje enviado espere pronto respuesta!', 4000,'rounded') // 4000 is the duration of the toast</script>
+        </h:body>
+</html>
+

@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Realizar Un Envio</title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+      <body>
+          <nav class=" light-blue accent-4 z-depth-5    ">
+  <div class="nav-wrapper">
+      <img class="circle responsive-img" src="../img/3.jpg" height="20px" width="50px"></img>
+
+    <ul class="right hide-on-med-and-down">
+     
+      <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+      <div class="container ">
+       
+          <!-- Dropdown Structure -->
+
+
+         <div class="row">
+
+      <div class="col s12 m4 l3  "> <!-- Note that "m4 l3" was added -->
+      
+           <div class="collection z-depth-5">
+    
+    <h:link outcome="misdatos" value="Mis Datos" class="collection-item"> <span class="large material-icons">  assignment_ind</span> </h:link>
+    <h:link outcome="realizarenvio" value="Realizar Un Envio" class="collection-item"><span class="large material-icons">offline_pin</span></h:link>
+   <h:link outcome="consultarutas" value="Consultar Rutas" class="collection-item"><span class="large material-icons">view_day</span> </h:link>
+   <h:link outcome="consultartarifas" value="Consultar Tarifas" class="collection-item"><span class="large material-icons">business</span> </h:link>
+  </div>
+          
+  
+  
+            
+
+      </div>
+
+      <div class="col s12 m8 l9 z-depth-5"> <!-- Note that "m8 l9" was added -->
+        <!-- Teal page content
+
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+        <div class="card-panel blue-grey lighten-5">
+          <div class="row valign-wrapper">
+            <div class="col s3">
+                
+                <p><img src="../img/images.jpg" alt="" class="circle responsive-img"/> </p><!-- notice the "circle" class -->
+            </div>
+            <div class="">
+              
+                  <form>
+      <div class="z-depth-5">
+          <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" value="JUan" class="validate"/>
+          <label for="icon_prefix">Nombre</label>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" value="Rincon" class="validate"/>
+          <label for="icon_prefix">Apellidos</label>
+        </div>
+          
+          </div>
+          <div class="input-field col s6">
+          <i class="material-icons prefix">clear_all</i>
+          <input id="icon_prefix" type="text" value="46546546" class="validate"/>
+          <label for="icon_prefix">Documento</label>
+        </div>
+          
+          
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" class="validate"/>
+          <label for="icon_telephone">Telefono</label>
+        </div>
+          <div class="input-field col s6">
+          <i class="material-icons prefix">location_on</i>
+          <input id="icon_prefix" type="text" class="validate"/>
+          <label for="icon_prefix">Direccion</label>
+        </div>
+          <div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <input id="icon_prefix" type="text" class="validate"/>
+          <label for="icon_prefix">Correo</label>
+        </div>
+          <div class="input-field col s6">
+          <i class="material-icons prefix">sort_by_alpha</i>
+          <input id="icon_prefix" type="text" class="validate"/>
+          <label for="icon_prefix">Clave</label>
+          <ul>
+          <li><center> <a  class="waves-effect waves-light btn-large z-depth-5" style="bottom-align-content: 200px; left:200px">Guardar Cambios</a>
+          <a class="waves-effect waves-light btn-large z-depth-5" style="bottom-align-content: 200px; left:200px">Cancelar</a></center></li>
+          </ul>
+        </div>
+          
+      
+  
+      </div>
+    </form>
+                
+              
+            </div>
+          </div>
+        </div>
+        
+  
+      </div>
+
+    </div>
+          
+      </div>
+         
+    </body>
+       
+       
+        
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.js" type="text/javascript"></script>
+        <script src="../js/materialize.min.js" type="text/javascript"></script>
+    </h:body>
+    
+</html>
+

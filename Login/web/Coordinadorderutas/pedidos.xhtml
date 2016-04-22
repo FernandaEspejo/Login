@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     </h:head>
+    <h:body>
+        
+           
+              <div class="nav-wrapper">
+   <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Valley Cargo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+          <li><h:link outcome="vehiculos" value="Vehiculos"/></li> 
+          <li><h:link outcome="pedidos" value="Pedidos"/></li> 
+          <li><h:link outcome="conductores" value="Conductores"/></li> 
+          <li><h:link outcome="rutas" value="Rutas"/></li>
+          <li><h:link outcome="misdatos" value="Misdatos"/></li> 
+          <li><h:link outcome="contactenos" value="Contactenos"/></li>
+          
+       </ul> 
+    </div>
+  </nav>
+                   
+                   
+                    
+            
+            </div>
+             
+            
+                <br/>
+                    <h1><center><h:outputText value="Paquetes"/></center></h1>
+                <br/>
+                 <div class="col s12 m8 l9"> 
+     
+  
+      </div>
+               <table class="bordered centered">
+       <thead>
+          <tr>
+              <th data-field="id">Peso</th>
+              <th data-field="name">Volumen</th>
+              <th data-field="name">Embalaje</th>
+              <th data-field="price">Detalle</th>
+              <th data-field="id">Tipo_paquete</th>
+          </tr>
+        </thead>
+
+        
+          <tr>
+            <td>40</td>
+            <td>20 45 63</td>
+            <td>102007</td>
+            <td>Fragil</td>
+            <td>Grande</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>45 55 63</td>
+            <td>10250</td>
+            <td>Fragil</td>
+            <td>Mediano</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>10 35 33</td>
+            <td>10000</td>
+            <td>pesado</td>
+            <td>Grande</td>
+          </tr>
+             
+         
+      
+        
+      </table>
+        
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.js" type="text/javascript"></script>
+        <script src="../js/materialize.min.js" type="text/javascript"></script>
+        </h:body>
+</html>
+

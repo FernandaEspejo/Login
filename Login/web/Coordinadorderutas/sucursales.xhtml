@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+       <div class="panel-body">
+                                
+           <c:forEach items="#{sucursalesControlador.todaslasSucursales()}" var="Listas">
+                                        
+                                       
+               <h3>Ciudad : #{Listas.ciudadID.nombre}> 
+  
+                                        
+                   <h4>Direccion :  #{Listas.direccion} Telefono :  #{Listas.telefono} </h4>  
+                                       
+                   <h4>Barrio :  #{Listas.barrio} &nbsp; Correo :  #{Listas.correo}</h4>
+                                        <h4>Horario de Atencion : </h4>
+                                        <hr/> 
+                                        
+                                    </c:forEach>
+                                
+                                
+                                
+                                </div>
+    </h:body>
+</html>
+

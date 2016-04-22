@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cuentas</title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.js" type="text/javascript"></script>
+        <script src="../js/materialize.min.js" type="text/javascript"></script>
+    </h:head>
+    <h:body>
+    
+      <div class="container ">
+       
+          <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper">
+    <img class="circle responsive-img" src="../img/2.png" alt=" "></img>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="sass.html">Clientes</a></li>
+      <li><a href="badges.html">Cuentas</a></li>
+      <li><a href="badges.html">Movimientos</a></li>
+      <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+         <div class="row">
+<!-- 
+      <div class="col s12 m4 l3  "> Note that "m4 l3" was added 
+    
+         
+
+      </div>
+-->
+      <div class="col s12 "> <!-- Note that "m8 l9" was added -->
+        <!-- Teal page content
+
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+     
+<table class="bordered striped">
+        <thead>
+          <tr>
+              <th data-field="id">Numero de cuenta</th>
+              <th data-field="id">Documento</th>
+              <th data-field="name">Titular</th>
+              <th data-field="price">Fecha de creacion</th>
+              <th data-field="price">Tipo de cuenta</th>
+              <th data-field="price">Estado</th>
+              <th data-field="price">Saldo</th>
+              <th data-field="price">Actualizar</th>
+              <th data-field="price">Eliminar</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <c:forEach var="cuentas" items="#{cuentasControlador.leerMisAdminCuenta()}">
+
+                                <tr>
+                                    
+                                    <td>#{cuentas.codigoAdmin}</td>
+                                    <td>#{cuentas.cedulaCliente.cedula}</td>
+                                    <td>#{cuentas.cedulaCliente.nombre}</td>
+                                   <td>#{cuentas.cedulaCliente.nombre}</td>
+                                    <td>#{cuentas.cuenta.nombreCuenta}</td>
+                                    <td>#{cuentas.cuenta.estado}</td>
+                                    <td>#{cuentas.cuenta.saldo}</td>
+                                    
+                                    
+                                    <td> <h:link outcome="cuentas"> <li class="material-icons">person_pin</li> </h:link> </td>
+                                    <td> <h:link outcome="cuentas"> <li class="material-icons">delete</li> </h:link> </td>
+                                  
+          </tr>
+           
+          </c:forEach>
+          
+           
+          
+        </tbody>
+    
+      </table>
+   
+        
+        <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="large mdi-navigation-menu"></i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+         <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Nueva Cuenta</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Cuenta nueva</h4>
+        <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate"/>
+          <label for="icon_prefix">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">label_outline</i>
+          <input id="icon_telephone" type="tel" class="validate"/>
+          <label for="icon_telephone">label_outline</label>
+        </div>
+          <f:view>
+              <h:form>
+                 
+  <h:selectOneRadio value="#{cuestionario.fumador}">    <f:selectItem itemValue="si" itemLabel="Fumador"/>    <f:selectItem itemValue="no" itemLabel="No fumador"/> </h:selectOneRadio>
+                      
+              </h:form>
+          </f:view>
+
+      </div>
+
+    </form>
+  </div>
+      <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="large mdi-navigation-menu"></i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+       <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+      </div>
+
+    </div>
+      </div>
+          
+    
+       
+          
+        <script type="text/javascript"> 
+        
+        $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+    $('.fixed-action-btn').openFAB();
+    
+     $('.fixed-action-btn').closeFAB();
+  </script>
+      
+    </h:body>
+    
+</html>
+
